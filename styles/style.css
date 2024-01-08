@@ -1,0 +1,156 @@
+/* Defining color variables */
+:root {
+    --primary-color: #5e72e4; /* Updated primary color */
+    --secondary-color: #f7fafc; /* Updated secondary color */
+    --accent-color: #11cdef; /* Updated accent color */
+    --text-color: #32325d; /* Updated text color */
+    --background-color: #f8f9fe; /* Updated background color */
+}
+
+/* Global body styling */
+body {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url(../assets/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 10%;
+    -webkit-font-smoothing: antialiased; /* Added for smoother text rendering */
+    -moz-osx-font-smoothing: grayscale; /* Added for smoother text rendering */
+}
+
+/* Main container styling */
+.main {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    gap: 100px;
+    padding: 50px 45px;
+    border: 2px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    justify-content: space-between;
+    max-width: 960px; /* Updated for responsiveness */
+    border-radius: 15px; /* Updated for modern look */
+}
+
+/* Name input group styling */
+.input-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+/* Button styling */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); /* Updated for depth */
+    letter-spacing: 0.025em; /* Updated for style */
+}
+
+/* Name input styling */
+#name {
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: none;
+    padding: 5px;
+    border: 2px solid var(--primary-color); /* Updated border style */
+}
+
+/* Radio group styling */
+.radio-group {
+    padding-bottom: 21px;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Clear button styling */
+#clear {
+    width: 70%;
+}
+
+/* Saved answer area styling */
+.saved-answer-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border: 2px dashed gray;
+    padding: 10px;
+    width: 370px;
+}
+
+/* Typography styling for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+/* Paragraph styling */
+p {
+    margin: 0 0 1em;
+}
+
+/* Error message styling */
+#error {
+    display: none; /* Hidden by default */
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Error message visibility styling */
+#error.visible {
+    display: block; /* Show the error message */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        padding: 20px; /* Updated for mobile */
+    }
+    .btn {
+        width: 100%; /* Full width for mobile */
+    }
+    #clear {
+        width: 100%;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <script type="text/javascript" src="scripts/script.js" defer></script>
+    <title>Gender Bet</title>
+</head>
+<body>
+<div id="error" class="error-message">
+    <!-- Error messages will be handled by JS -->
+</div>
+<div class="main">
+    <div class="container left">
+        <form id="form">
+            <h1>Gender Bet!</h1>
+            <div class="input-name">
+                <label for="name">Name</label><input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="radio-male" name="gender" value="male">
+                    <label for="radio-male">Male</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="radio-female" name="gender" value="female">
+                    <label for="radio-female">Female</label>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn" id="submit" type="submit">Submit</button>
+                <button class="btn" id="save" type="button">Save</button>
+            </div>
+        </form>
+    </div>
+    <div class="container right">
+        <h1>Prediction</h1>
+        <p id="gender-txt">Gender</p>
+        <p id="gender-val">Probability</p>
+        <div class="saved-answer-area">
+            <p id="saved-answer">Saved info will be displayed here.</p>
+            <button class="btn" id="clear">Clear</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
